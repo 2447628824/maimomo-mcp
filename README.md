@@ -109,16 +109,54 @@ pip install git+https://github.com/2447628824/maimomo-mcp.git
 ## 开发
 
 ```bash
-# 克隆仓库
 git clone https://github.com/2447628824/maimomo-mcp.git
 cd maimomo-mcp
-
-# 安装依赖
 pip install -e .
+```
 
-# 设置 token 后运行
+### 本地运行
+
+```bash
+# Windows PowerShell
 $env:MAIMEMO_API_TOKEN = "你的-Token"
 maimemo-mcp
+
+# Linux / macOS
+export MAIMEMO_API_TOKEN="你的-Token"
+maimemo-mcp
+```
+
+也可以直接用 Python 模块启动：
+
+```bash
+python -m maimemo_mcp
+```
+
+### MCP Inspector 调试
+
+使用 [MCP Inspector](https://github.com/modelcontextprotocol/inspector) 测试工具：
+
+```bash
+npx @modelcontextprotocol/inspector maimemo-mcp
+```
+
+### 本地 opencode 配置
+
+在 `~/.config/opencode/opencode.jsonc` 中配置指向本地项目：
+
+```json
+{
+  "mcpServers": {
+    "maimemo": {
+      "command": "python",
+      "args": ["-m", "maimemo_mcp"],
+      "cwd": "/path/to/maimomo-mcp",
+      "env": {
+        "MAIMEMO_API_TOKEN": "你的-Token"
+      }
+    }
+  }
+}
 ```
 
 ## License
