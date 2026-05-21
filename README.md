@@ -12,7 +12,7 @@ pip install maimomo-mcp
 
 ### 获取 API Token
 
-1. 打开墨墨背单词 App，进入「我的」→「Open API」
+1. 打开墨墨背单词 App，进入「我的」→「更多设置」→「实验功能」→「开放API」
 2. 生成并复制 API Token
 
 ### 配置 MCP Client
