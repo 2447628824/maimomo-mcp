@@ -5,7 +5,7 @@ MCP Server for [墨墨背单词](https://www.maimemo.com) Open API，让 AI 助�
 ## 安装
 
 ```bash
-pip install maimomo-mcp
+pip install git+https://github.com/2447628824/maimomo-mcp.git
 ```
 
 ## 配置
